@@ -1,0 +1,12 @@
+{{!
+You can use this template to render any errors on your site if you wish
+}}
+{{#if hasErrors}}
+  <p class="error">
+    {{e}} <br>
+    {{msg}} 
+  </p>
+{{else if charError}}
+  <p class="not-found">We're sorry, but no results were found for {{charName}}.</p>
+{{/if}}
+
