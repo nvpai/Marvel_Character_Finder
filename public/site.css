@@ -1,0 +1,132 @@
+/*This file should have 10 CSS rulesets */
+h1{
+    color: #5158BB;
+    text-align: center;
+    font-size: 25pt;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 2px lightslategray;
+    
+}
+head, body{
+    background-color: #F6F4D2;
+}
+p{ 
+    font-size: 15pt;
+    font-style: italic;
+    color:#f52a75;
+}
+.labelId{
+    text-align: center;
+    font-style: bolder;
+    color: dodgerblue;
+}
+#formId{
+    text-align: center;
+    border: 2px solid darkblue;
+    padding: 50px;
+ 
+}
+.submitInput{
+    background-color: white;
+    color: black;
+    border: 2px solid darkviolet;
+    font-size: 14px;
+    transition-duration: 0.5s;
+}
+.submitInput:hover{
+    background-color: darkviolet;
+    color: aliceblue;
+}
+
+h2{
+    color: red;
+    font-family: 'Courier New', Courier, monospace, serif;
+    font-size: 25pt;
+    text-transform: capitalize;
+    text-shadow: 2px 2px black;
+
+}
+ol{
+    color: #9d4edd;
+}
+.orderList{
+    color: #9d4edd;;
+    text-decoration: none;
+}
+.orderList:visited{
+    color: green;
+}
+.orderList:hover{
+    color: cadetblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.orderList:active{
+    color: black;
+}
+.backLink{
+    color: #df2935;
+    text-decoration: none;
+    transition: font-size 0.2s;
+    
+
+}
+.backLink:hover{
+    color: hotpink;
+    font-size: 20px;
+    text-decoration-line:overline;
+
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:5px solid gold;
+    /* border: 2px solid black; */
+    
+}
+.comicList{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    color: #5ec4ec;
+    font-size: larger;
+    
+
+}
+#singlePage p{
+    color: rgb(13, 168, 116);
+}
+#singlePage a{
+    color: indigo;
+    /* text-decoration: none; */
+    transition: font-size 0.2s;
+    
+}
+#singlePage a:hover{
+    font-size: 20px;
+    text-decoration-line:overline;
+}
+.error , .not-found{
+    color: red;
+    text-align: center;
+    font-style: normal;
+    font-size: 25px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer {
+    border-top: 2px solid black;
+    margin-top: auto;
+    background-color: rgb(91, 85, 85);
+    opacity: 0.6;
+}
+footer p{
+    font-weight:bold ;
+    color: azure;
+}
