@@ -1,4 +1,4 @@
-//Here is where you'll set up your server as shown in lecture code
+//Here is where the server is set up
 import express from 'express';
 const app = express();
 import configRoutes from './routes/index.js';
