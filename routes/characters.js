@@ -1,11 +1,9 @@
-//import express and express router as shown in lecture code and worked in previous labs.  Import your data functions from /data/characters.js that you will call in your routes below
-import {Router} from 'express';
+//import express and express router 
 const router = Router();
 import * as charData from '../data/characters.js';
 import help from '../helpers.js';
 
 router.route('/').get(async (req, res) => {
-  //code here for GET will render the home handlebars file
   
   try{
     return res.render('home',{title:'Marvel Characters Found'})
@@ -16,8 +14,7 @@ router.route('/').get(async (req, res) => {
 });
 
 router.route('/searchmarvelcharacters').post(async (req, res) => {
-  //code here for POST this is where your form will be submitting searchCharacterByName and then call your data function passing in the searchCharacterByName and then rendering the search results of up to 15 characters.
-  const bodyData = req.body;
+  
   try{
     bodyData.searchCharacterByName= help.checkString(bodyData.searchCharacterByName,'Character Name');
   }
@@ -41,7 +38,7 @@ router.route('/searchmarvelcharacters').post(async (req, res) => {
 });
 
 router.route('/marvelcharacter/:id').get(async (req, res) => {
-  //code here for GET a single character
+  
   try {
     req.params.id = help.checkId(req.params.id,'ID');
   } catch (e) {
