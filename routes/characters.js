@@ -1,5 +1,6 @@
 //import express and express router 
-const router = Router();
+import Express from 'express';
+const router = Express.Router();
 import * as charData from '../data/characters.js';
 import help from '../helpers.js';
 
@@ -14,7 +15,8 @@ router.route('/').get(async (req, res) => {
 });
 
 router.route('/searchmarvelcharacters').post(async (req, res) => {
-  
+  const bodyData = req.body
+  // console.log(bodyData)
   try{
     bodyData.searchCharacterByName= help.checkString(bodyData.searchCharacterByName,'Character Name');
   }

@@ -1,8 +1,9 @@
 //import axios, md5
 import axios from "axios";
 import help from '../helpers.js'
-import {config} from 'dotenv'; // Import config function from dotenv
-config();
+// import {config} from 'dotenv'; // Import config function from dotenv
+// config();
+// const privatekey= process.env.PRIVATE_KEY
 import md5 from 'blueimp-md5' //you will need to install this module;
 const publickey = '8afbf0b7c782b8acf89468f94ea2c953';
 const privatekey = 'c8a690983ffa79d2cfc414577af47f0cc389802d';
