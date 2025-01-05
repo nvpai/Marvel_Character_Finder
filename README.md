@@ -6,11 +6,11 @@ Technologies Used
 <ul>
 <li>HTML: For the structure of the web pages.</li>
 <li>CSS: For styling the application.</li>
-Handlebars.js: For creating templates and rendering dynamic content.
-Node.js: Backend server.
-Express.js: To build and manage routes.
-Axios: For making HTTP requests to the Marvel API.
-Marvel API: To fetch character data and details.
+<li>Handlebars.js: For creating templates and rendering dynamic content.</li>
+<li>Node.js: Backend server.</li>
+<li>Express.js: To build and manage routes.</li>
+<li>Axios: For making HTTP requests to the Marvel API.</li>
+<li>Marvel API: To fetch character data and details.</li>
 </ul>
 
 Steps to run the project 
