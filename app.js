@@ -33,8 +33,18 @@ app.set('view engine', 'handlebars');
 
 configRoutes(app);
 
-app.listen(3000, () => {
-  console.log("We've now got a server!");
-  console.log('Your routes will be running on http://localhost:3000');
-});
+// app.listen(3000, () => {
+//   console.log("We've now got a server!");
+//   console.log('Your routes will be running on http://localhost:3000');
+// });
+const PORT = process.env.PORT || 3000;
 
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log("We've now got a server!");
+    console.log(`Your routes will be running on http://localhost:${PORT}`);
+  });
+}
+
+// Export the app for Vercel
+export default app;
