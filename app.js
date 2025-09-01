@@ -28,8 +28,15 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(rewriteUnsupportedBrowserMethods);
 
-app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
+// app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs.engine({
+  defaultLayout: 'main',
+  layoutsDir: __dirname + '/views/layouts/',
+  partialsDir: __dirname + '/views/partials/',
+  extname: '.handlebars'
+}));
 app.set('view engine', 'handlebars');
+app.set('views', __dirname + '/views');
 
 configRoutes(app);
 
