@@ -7,6 +7,10 @@ import {dirname} from 'path';
 import exphbs from 'express-handlebars';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+// Only load dotenv in development
+if (process.env.NODE_ENV !== 'production') {
+  import('dotenv').then(dotenv => dotenv.config());
+}
 
 const staticDir = express.static(__dirname + '/public');
 
