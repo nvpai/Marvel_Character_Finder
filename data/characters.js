@@ -6,7 +6,7 @@ import help from '../helpers.js'
 // const privatekey= process.env.PRIVATE_KEY
 import md5 from 'blueimp-md5' //you will need to install this module;
 const publickey = '8afbf0b7c782b8acf89468f94ea2c953';
-const privatekey = 'c8a690983ffa79d2cfc414577af47f0cc389802d';
+const privatekey = process.env.MARVEL_PRIVATE_KEY; 
 const ts = new Date().getTime();
 const stringToHash = ts + privatekey + publickey;
 const hash = md5(stringToHash);
@@ -16,6 +16,9 @@ const count = 15;
 
 export const searchCharacterByName = async (name) => {
   //Function to search the api and return up to 15 characters matching the name param
+  if (!privatekey) {
+    throw 'Error: Marvel private key not configured. Please set MARVEL_PRIVATE_KEY environment variable.';
+  }
   name = help.checkString(name,'Char Name');
   const url = baseUrl + '?nameStartsWith='+ name + '&limit='+count +'&ts=' + ts + '&apikey=' + publickey + '&hash=' + hash;
   
@@ -42,6 +45,9 @@ export const searchCharacterByName = async (name) => {
 
 export const searchCharacterById = async (id) => {
   //Function to fetch a character from the api matching the id
+  if (!privatekey) {
+    throw 'Error: Marvel private key not configured. Please set MARVEL_PRIVATE_KEY environment variable.';
+  }
   id = help.checkId(id,'Id')
   const intId = parseInt(id)
   
