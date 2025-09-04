@@ -6,7 +6,14 @@ import help from '../helpers.js'
 // const privatekey= process.env.PRIVATE_KEY
 import md5 from 'blueimp-md5' //you will need to install this module;
 const publickey = '8afbf0b7c782b8acf89468f94ea2c953';
-const privatekey = process.env.MARVEL_PRIVATE_KEY; 
+const privatekey = process.env.MARVEL_PRIVATE_KEY;
+
+// console.log('Environment check:');
+// console.log('NODE_ENV:', process.env.NODE_ENV);
+// console.log('Private key loaded:', privatekey ? 'Yes' : 'No');
+// console.log('Private key length:', privatekey ? privatekey.length : 0);
+
+
 const ts = new Date().getTime();
 const stringToHash = ts + privatekey + publickey;
 const hash = md5(stringToHash);
