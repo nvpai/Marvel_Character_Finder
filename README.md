@@ -13,8 +13,16 @@ Technologies Used
 <li>Marvel API: To fetch character data and details.</li>
 </ul>
 
-Steps to run the project 
+
+The application is deployed using Vercel
+Here is the link- https://marvel-character-finder-red.vercel.app/
+
+
+Steps to run the project manually on local environment
 1. Clone the Repository: git clone https://github.com/nvpai/Marvel_Character_Finder.git  
-2. Install Dependencies: npm install 
-3. Run: npm start
-4. Open the browser and go to: http://localhost:3000
+2. Go to https://developer.marvel.com/ and get a private key 
+3. Create a .env file to add the private key and save the variable name as below
+4. MARVEL_PRIVATE_KEY='Enter_Your_Private_Key_Here'
+5. Install Dependencies: npm install 
+6. Run: npm start
+7. Open the browser and go to: http://localhost:3000 
