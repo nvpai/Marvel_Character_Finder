@@ -9,7 +9,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 // Only load dotenv in development
 if (process.env.NODE_ENV !== 'production') {
-  import('dotenv').then(dotenv => dotenv.config());
+  const dotenv = await import('dotenv');
+  dotenv.config();
 }
 
 const staticDir = express.static(__dirname + '/public');
@@ -53,7 +54,7 @@ const PORT = process.env.PORT || 3000;
 if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
     console.log("We've now got a server!");
-    console.log(`Your routes will be running on http://localhost:${PORT}`);
+    console.log(`Routes will be running on http://localhost:${PORT}`);
   });
 }
 
